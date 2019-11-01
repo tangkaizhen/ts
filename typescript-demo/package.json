@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc -w demo.ts& live-server",
+    "start": "nodemon --exec ts-node ./demo.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

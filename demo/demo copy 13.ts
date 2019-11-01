@@ -1,6 +1,7 @@
 /**
- * 只读
+ * 
  */
+
 interface Person{
     readonly first_name:string
     last_name?:string
@@ -9,4 +10,4 @@ interface Person{
      first_name:string='jack'
  }
  let p:Programmer=new Programmer()
- p.first_name='tome'
+ console.log(p.first_name)
