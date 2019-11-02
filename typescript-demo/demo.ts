@@ -1,12 +1,15 @@
 /**
- * 只读
+ * 
  */
-interface Person{
-    readonly first_name:string
-    last_name?:string
-}
- class Programmer implements Person{
-     first_name:string='jack'
+
+ //第一种方法
+ let d:(param:string)=>string
+ d=function(pa:string):string{
+    return pa
  }
- let p:Programmer=new Programmer()
- p.first_name='tome'
+ console.log(d('tome'))
+//  第二种，用接口方法
+interface Fn{
+    (param:string):string
+}
+let f:Fn=(pa:string):string=>pa
