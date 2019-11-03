@@ -1,15 +1,13 @@
 /**
- * 
  */
 
- //第一种方法
- let d:(param:string)=>string
- d=function(pa:string):string{
-    return pa
- }
- console.log(d('tome'))
-//  第二种，用接口方法
-interface Fn{
-    (param:string):string
+let splitInHalf=(str:string | null):string=>{
+    let checkString=()=>{
+        if(str === null||str===undefined){
+            str="test"
+        }
+    }
+    checkString();
+    return (str as String).substring(0,(str as String).length/2)
 }
-let f:Fn=(pa:string):string=>pa
+console.log(splitInHalf('hello'))
