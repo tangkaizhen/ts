@@ -29,3 +29,33 @@ class Programmer extends Person{
 
 let p:Programmer=new Programmer('jack',22)
 p.find('tome')
+
+//=============================
+class Rectangle {
+    private w:number
+    private h:number
+    constructor(w:number,h:number) {
+        this.w=w
+        this.h=h
+    }
+    getAreaFn():Function{
+        return ()=>{
+            console.log(this.w * this.h)
+        }
+    }    
+}    
+let r:Rectangle=new Rectangle(2,4)
+r.getAreaFn()()
+
+/**
+ * 联合类型
+ */
+let show=(x:number | string):void=>{
+    // typeof来判断类型
+    if(typeof x=='number'){
+        console.log(`x 是 number`)
+    }else{
+        console.log(`x 是 string`)
+    }
+}
+show(111)

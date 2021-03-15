@@ -25,4 +25,13 @@
         (v as Car).ride()
     }
  }
+
+ let move1=(v:Bike|Car):void=>{
+    if(v instanceof Car){
+        v.ride()
+    }else{
+        v.drive()
+    }
+ }
+
 move(new Bike())
